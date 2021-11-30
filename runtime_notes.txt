@@ -1,0 +1,5 @@
+After running the functions multiple times, it's clear that the append method has a better runtime as the size of the array scales. At lower sizes, the competition is closer, but when the arrays really increase in size is when the append method really shines. The main reason behind this is because of using push() over unshift(). 
+
+Since unshift() places elements at the start of an array, it has to modify the indeces of the following elements after one is unshifted in. With a smaller size array, this is no problem, but when it has to work with a larger array, the process of modifying each index takes a toll on the runtime.
+
+Push() only adds an element to the end of an array, meaning it only has to modify one index: the index of the new element pushed in. Since the append method uses push(), it scales much better as the runtimes remain similar enough across array sizes.
